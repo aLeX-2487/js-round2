@@ -1,0 +1,244 @@
+html {
+  width: 100%;
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑", sans-serif;
+  overflow-x: hidden;
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 45%;
+  }
+}
+#tm:checked ~ .back-blue {
+  padding-left: 50%;
+}
+#tm:checked ~ .main {
+  padding-left: 50%;
+  overflow: scroll;
+}
+#tm:checked ~ .back-blue ul {
+  left: 0;
+}
+#tm {
+  display: none;
+}
+header {
+  width: calc(100% - 40px);
+}
+header .sidenav {
+  position: absolute;
+  left: -50%;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 1080px;
+  background: gainsboro;
+}
+header .sidenav li {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+header .sidenav li a {
+  float: left;
+  font-size: 2rem;
+  line-height: 63px;
+  color: #67C5D2;
+}
+header .sidenav li a + a {
+  float: right;
+  font-size: 5rem;
+  color: #67C5D2;
+  line-height: 56px;
+}
+header .sidenav .pic_1 {
+  background-position: 0px 0px;
+  width: 41px;
+  height: 40px;
+}
+header .sidenav .pic_2 {
+  background-position: -41px 0px;
+  width: 41px;
+  height: 40px;
+}
+header .sidenav .pic_3 {
+  background-position: -82px 0px;
+  width: 40px;
+  height: 40px;
+}
+header .sidenav .pic_4 {
+  background-position: -122px 0px;
+  width: 41px;
+  height: 40px;
+}
+header .sidenav .pic_1,
+header .sidenav .pic_2,
+header .sidenav .pic_3,
+header .sidenav .pic_4 {
+  float: left;
+  margin: 10px 20px;
+  background-image: url("side.png");
+}
+header .navbar-toggle {
+  position: relative;
+  margin: 16px 10px 16px 0;
+  padding: 10px;
+  outline: none;
+}
+header .navbar-toggle span {
+  display: block;
+  width: 36px;
+  height: 4px;
+  background: white;
+}
+header .navbar-toggle span + span {
+  margin-top: 8px;
+}
+.main {
+  width: 100%;
+}
+.main .main-1 {
+  margin: 30px 50px 25px 50px;
+  padding: 0;
+  border: 1px solid gainsboro;
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+  line-height: 120px;
+  color: #999999;
+  background: white;
+}
+.main .main-1 a {
+  font-size: 6rem;
+  color: #e7e7e7 !important;
+}
+.main .main-1 a,
+.main .main-1 a:focus,
+.main .main-1 a:hover,
+.main a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #999999;
+}
+.main a,
+.main a:hover {
+  text-decoration: none;
+}
+.main .main-2 {
+  width: calc (100% - 100px);
+  height: 65rem;
+  margin: 0 50px;
+  padding-bottom: 3rem;
+  border: 1px solid gainsboro;
+  text-align: center;
+}
+.main .main-2 .main-2-1 {
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 90px;
+  color: orange;
+  text-align: center;
+  border-bottom: 1px solid orange;
+  background: white;
+}
+#myCarousel {
+  position: relative;
+}
+#myCarousel .carousel-indicators {
+  position: absolute;
+  bottom: 60px;
+  width: 50%;
+  margin: 0 25%;
+  text-align: center;
+  list-style: none;
+}
+#myCarousel .carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background: #29bde0;
+}
+#myCarousel .carousel-indicators li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background: gainsboro;
+  text-indent: -999px;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+#myCarousel .carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+#myCarousel .carousel-inner .item {
+  position: relative;
+  display: none;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  -o-transition: -o-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+#myCarousel .carousel-inner .active {
+  display: block;
+  position: relative;
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s ease-in-out;
+  backface-visibility: hidden;
+}
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+.main-2-2 {
+  width: 100%;
+}
+.main-2-2 .p-1 {
+  width: 80%;
+  line-height: 140px;
+  margin: 2.5rem auto;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  text-decoration: none;
+  background: #67C5D2 ;
+}
+.main-2-2 .p-2 {
+  width: 80%;
+  height: 2rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  color: #999999;
+}
+.main-2-2 img {
+  width: 2rem;
+  height: 4rem;
+  float: left;
+  position: absolute;
+  top: 37%;
+  right: 1%;
+}
+footer {
+  width: 100%;
+  height: 5rem;
+}

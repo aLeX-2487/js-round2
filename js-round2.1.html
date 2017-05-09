@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-round2.1</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0,user-scalable=no,initial-scale=1" />
+    <link href="./reset.css" rel="stylesheet" type="text/css">
+    <link href="./js-round2.1.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<header>
+    <a href="./js-round2.html"><</a>
+</header>
+
+<main>
+    <div class="main-1" >
+        玩家配比
+    </div>
+    <div id="main-2">
+        <div class="main-2-1">
+            <img src="./shashou.png">杀手
+            <input type="text"  disabled="disabled">人
+        </div>
+        <div class="main-2-1">
+            <img src="./peo.png">平民
+            <input type="text"  disabled="disabled">人
+        </div>
+    </div>
+    <div id="main-3">
+        请输入玩家数量
+        <input type="text" onblur="myFunction()">
+        <span>玩家数量为4-18</span>
+    </div>
+</main>
+<script>
+    var main3=document.getElementById("main-3");
+    var int3=main3.getElementsByTagName("input");
+    var main2=document.getElementById("main-2");
+    var int2=main2.getElementsByTagName("input");
+    function myFunction(){
+        var intNum3=int3[0].value;
+        var intNum2_0=int2[0].value;
+        var intNum2_1=int2[1].value;
+        if(intNum3==""){}
+        else if(intNum3<4||intNum3>18){
+            confirm("请输入正确的数字！")
+            int3[0].value="";
+        }
+        else {
+            int2[0].value=Math.floor(intNum3 / 4); //intNum2_0=  无效，下同
+            int2[1].value=intNum3 - int2[0].value;
+        }
+    }
+
+</script>
+
+<footer>
+    <button id="foot">去发牌</button>
+
+    <script>
+        var btn=document.getElementById("foot");
+
+        btn.onclick=function (){
+            window.location.href="./js-round2.2.html";
+        };
+    </script>
+
+</footer>
+
+
+</body>
+</html>
