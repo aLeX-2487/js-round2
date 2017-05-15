@@ -33,6 +33,10 @@
         <span>玩家数量为4-18</span>
     </div>
 </main>
+<footer>
+    <button id="foot">去发牌</button>
+</footer>
+
 <script>
     var main3=document.getElementById("main-3");
     var int3=main3.getElementsByTagName("input");
@@ -42,7 +46,14 @@
         var intNum3=int3[0].value;
         var intNum2_0=int2[0].value;
         var intNum2_1=int2[1].value;
-        if(intNum3==""){}
+        if(isNaN(intNum3)){
+            alert("只能输入数字！");
+            int3[0].value="";
+        }
+        else if(intNum3%1!=0){
+            alert("请输入整数！");
+            int3[0].value="";
+        }
         else if(intNum3<4||intNum3>18){
             confirm("请输入正确的数字！")
             int3[0].value="";
@@ -52,22 +63,16 @@
             int2[1].value=intNum3 - int2[0].value;
         }
     }
-
+    var btn=document.getElementById("foot");
+    btn.onclick=function (){
+        if(int3[0].value==""){
+            alert("请输入数字！");
+        }
+        else {
+            url = "./js-round2.2.html?num=" + decodeURI(int3[0].value);
+            location.href=url;
+        }
+    }
 </script>
-
-<footer>
-    <button id="foot">去发牌</button>
-
-    <script>
-        var btn=document.getElementById("foot");
-
-        btn.onclick=function (){
-            window.location.href="./js-round2.2.html";
-        };
-    </script>
-
-</footer>
-
-
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1.0,user-scalable=no,initial-scale=1" />
     <link href="./reset.css" rel="stylesheet" type="text/css">
     <link href="./js-round2.2.css" rel="stylesheet" type="text/css">
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
 <header>
@@ -16,16 +16,90 @@
 </header>
 <main>
     <div id="box">
-        <img src="head-1.png">
-        <span>1</span>
+        <img src="./head-1.png">
+        <img src="./people.png">
+        <p>角色:平民</p>
+        <span id="span">1</span>
     </div>
 </main>
 <footer>
-    <button>
-        查看1号身份
+    <button id="btn">
+
     </button>
 </footer>
 
-
+<script>
+        var url=location.search;
+        var strs=url.split("=");
+        var num=strs[1];
+        var killer_n=Math.floor(num / 4);
+        var peo_n=num - killer_n;
+        var box = $("#box");
+        var img0=$("#box img:first");
+        var img1=$("#box img:last");
+        var p0=$("#box p:first");
+        var arr_k=[];
+        for (i = 0; i < killer_n; i++) {
+            arr_k[i] ="角色:杀手";
+        }
+        var arr_p=[];
+        for (j = killer_n; j < num; j++) {
+            arr_p[j] ="角色:平民";
+        }
+        var arr=[];
+        for (k = 0; k <num; k++) {
+            if (k < killer_n) {
+                arr[k] = arr_k[k];
+            }
+            else {
+                arr[k] = arr_p[k];
+            }
+        }
+        arr.sort(function(){return 0.5-Math.random();});
+        console.log(arr);
+    var btn=$("#btn");
+    var span=$("#span");
+        $(document).ready(function(){
+    if(url.indexOf("?")==-1){
+        alert("参数错误！");
+    }
+    btn.text("查看1号身份");
+        });
+        var x=1;
+        btn.click(function(){
+                if(btn.text()=="隐藏并传递给"+(x+1)+"号"){
+                    img0.show();
+                    img1.hide();
+                    p0.hide();
+                    btn.text("查看"+(x+1)+"号身份");
+                    span.text(x+1);
+                    x++;
+                }
+                else if(x==num){
+                    img0.hide();
+                    img1.show();
+                    p0.show();
+                    p0.text(arr[x-1]);
+                    btn.text("法官查看");
+                    x=num+1;
+                }
+                else if(x==num+1){
+                    url = "./js-round2.3.html?num=" + escape(num);
+                    var z=0;
+                    for(z=0;z<num;z++){
+                        url+= "&peo=" + escape(arr[z]);
+                    }
+                    location.href=url;
+                }
+               else if(btn.text()=="查看" + x + "号身份"){
+                    img0.hide();
+                    img1.show();
+                    p0.show();
+                    btn.text("隐藏并传递给"+(x+1)+"号");
+                    p0.text(arr[x-1]);
+                }
+            }
+        )
+</script>
 </body>
 </html>

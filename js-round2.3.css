@@ -11,13 +11,13 @@ body {
 }
 @media (max-width: 500px) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 header {
   width: 100%;
   height: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   background: #29bde0;
   text-align: center;
   border-bottom: 1px solid white;
@@ -41,55 +41,47 @@ header span {
   line-height: 100px;
   color: white;
 }
-main #box {
-  width: 80% ;
-  height: 650px;
-  margin: 60px 10% 80px 10%;
-  background: #ffedc5;
+main {
+  width: 80%;
+  min-height: 100vw ;
+  padding: 0 10% ;
+  margin-bottom: 60px;
+}
+main .dn {
+  display: none;
+}
+main .box {
+  width: 25%;
+  height: 20vw;
+  margin: 5vw calc((25% - 30px)/6);
   border: 5px solid white;
-  position: relative;
+  float: left;
 }
-main #box img {
-  margin: 80px 0;
-  margin-left: calc((100% - 301px)/2);
-}
-main #box img + img {
-  margin-left: calc((100% - 222px)/2);
-  display: none;
-}
-main #box p {
-  width: 100%;
-  height: 40px;
+main .box p {
+  height: 15vw;
   font-size: 4rem;
-  font-weight: bolder;
-  letter-spacing: .3rem;
-  line-height: 40px;
-  color: #29bde0;
   text-align: center;
-  display: none;
+  line-height: 15vw;
+  color: black;
+  background: #f5c97b;
 }
-main #box span {
-  position: absolute;
-  top: -40px;
-  left: calc((100% - 80px)/2);
-  width: 80px;
-  height: 80px;
-  font-size: 4.5rem;
-  font-weight: bolder;
-  line-height: 80px;
-  text-align: center;
-  border: 3px solid #ffedc5;
-  border-radius: 80px;
-  color: red;
-  background: white;
+main .box p + p {
+  height: 5vw;
+  font-size: 3rem;
+  line-height: 5vw;
+  color: white;
+  background: #83b09a;
+}
+main .cl {
+  clear: both;
 }
 footer {
   margin-bottom: 2rem;
 }
 footer button {
-  width: 85%;
+  width: 75%;
   height: 100px;
-  margin: 0 7.5%;
+  margin: 0 12.5%;
   font-size: 5rem;
   line-height: 100px;
   letter-spacing: .2rem;
