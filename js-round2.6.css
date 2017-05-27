@@ -1,0 +1,184 @@
+html {
+  width: 100%;
+  font-size: 62.5% ;
+}
+@media (max-width: 420px) {
+  html {
+    font-size: 45%;
+  }
+  .main-back img {
+    width: 262px;
+    height: 154px;
+  }
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑", sans-serif;
+  background: #67C5D2;
+}
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  font-size: 4rem;
+  line-height: 10rem;
+  color: white;
+  background: #67C5D2 ;
+  text-align: center;
+}
+.head a {
+  width: 8rem;
+  height: 10rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  float: left;
+}
+.head img {
+  width: 51px;
+  height: 42px;
+}
+.head-2 {
+  height: 10rem;
+  float: left;
+  font-size: 3rem;
+  line-height: 10rem;
+  text-align: center;
+  color: white;
+}
+.head-3 {
+  width: 8rem;
+  height: 10rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.head-3 img {
+  width: 40px;
+  height: 44px;
+  vertical-align: middle;
+}
+.main {
+  width: 100%;
+  height: 25rem;
+  margin-top: 10rem;
+  background: #67C5D2 ;
+  opacity: 1;
+}
+.main-back {
+  width: 20%;
+  height: 25rem;
+  margin: 0 auto;
+  padding: 0;
+  background: #67C5D2 ;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.main-back img {
+  max-width: 349px ;
+  max-height: 205px;
+  text-align: center;
+}
+.main-1 {
+  width: 80% ;
+  height: 10rem;
+  padding: 0 10%;
+  margin-bottom: 3rem;
+  color: yellow;
+}
+.main-1 h1 {
+  width: 100%;
+  height: 10rem;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 2.55rem;
+  line-height: 3rem;
+  margin: 0;
+}
+.main-2 {
+  width: 100% ;
+  height: 10rem;
+  padding: 0 10%;
+  margin-bottom: 4rem;
+  color: white;
+}
+.main-2 span {
+  width: 100%;
+  height: 16rem;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.main-3 {
+  width: 100% ;
+  height: 10rem;
+  padding: 0 4rem;
+  border-bottom: 1px solid gainsboro;
+  background: white;
+}
+.main-3-1 {
+  width: 100% ;
+  height: 3rem;
+}
+.main-3-1 h3 {
+  font-size: 2rem;
+  color: black;
+  float: left;
+  margin: 0;
+  line-height: 3rem;
+}
+h4 {
+  font-size: 1.5rem;
+  color: gainsboro;
+  float: right;
+  margin: 0;
+  line-height: 3rem;
+}
+.main-3-2 {
+  width: 100% ;
+  height: 8rem;
+}
+.main-3-2 h5 {
+  font-size: 1.8rem;
+  color: #c2c2c2;
+  float: left;
+  margin: 0;
+  line-height: 1.2rem;
+}
+.footer {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #67C5D2 ;
+  opacity: 0.5;
+}
+h7,
+h8 {
+  width: calc(46%);
+  height: 6rem;
+  margin: 2rem 2rem;
+  color: white;
+  float: left;
+  font-size: 3rem;
+  line-height: 6rem;
+  text-align: center;
+  background: red;
+  opacity: 1;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+}
+h7 {
+  left: 0;
+}
+h8 {
+  left: 50%;
+  background: orange;
+}

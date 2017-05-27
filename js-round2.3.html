@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>js-round2.2</title>
+    <title>js-round2.3</title>
     <meta name="viewport" content="width=device-width, maximum-scale=1.0,user-scalable=no,initial-scale=1" />
     <link href="./reset.css" rel="stylesheet" type="text/css">
     <link href="./js-round2.3.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
 </head>
 <body>
@@ -16,25 +16,9 @@
     <span>法官日记</span>
 </header>
 <main>
-    <div class="box"><p class="p">平民</p><p>1号</p></div>
-    <div class="box"><p class="p">平民</p><p>2号</p></div>
-    <div class="box"><p class="p">平民</p><p>3号</p></div>
-    <div class="box"><p class="p">平民</p><p>4号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>5号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>6号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>7号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>8号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>9号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>10号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>11号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>12号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>13号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>14号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>15号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>16号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>17号</p></div>
-    <div class="box dn"><p class="p">平民</p><p>18号</p></div>
-    <div class="cl"></div>
+
+
+
 
 </main>
 <footer>
@@ -44,28 +28,42 @@
 </footer>
 
 <script>
-    url=unescape(location.search);//定义？之后查询部分
-    var str=url.substr(url.indexOf("?")+1);
-    var strs=str.split("&");
-    var num=strs[0].split("=")[1];
-    var peo=[num];
-    for(i=1;i-1<num;i++){
-        peo[i-1]=strs[i].split(":")[1];
+/*    url=unescape(location.search);//定义？之后查询部分
+    var str=url.substr(url.indexOf("?"));
+    var strs=str.split("&");*/
+
+/*    var peo=[num];*/
+
+    var abc=JSON.parse(sessionStorage.arr_2);
+    var num=abc.length;
+
+
+
+$(document).ready(function(){
+    for(i=0;i<num;i++){
+        $("main").append('<div class="box"><p class="p">平民</p><p></p></div>');
+        $("p + p").eq(i).text(i+1+"号");
+        $(".p").eq(i).text(abc[i]);
     }
-    var box=$(".box");
-    var p=$(".p");
-    $(document).ready(function(){
-        if(url.indexOf("?")==-1){
-            alert("参数错误！");
+    if(location.search.indexOf("?")==0){$("#btn").text("返回");}
+    $("button:first").click(function(){
+        if(location.search.indexOf("?")==0){
+            url = "./js-round2.4.html?" +3;
+            location.href=url;
+
         }
         else {
-            for(j=0;j<num;j++){
-                $(".p").eq(j).text(peo[j]);
-                $(".box").eq(j).show();
-        }
-        }
-    }
-    );
+            var user = {
+                step:0,
+                die:[],
+                die_num:[],
+            };
+            user.step+=1;
+            sessionStorage.setItem('user',JSON.stringify(user));
+            location.href="./js-round2.4.html" ;
+        }}
+    )}
+)
 
 </script>
 </body>

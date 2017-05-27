@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-round2.5</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0,user-scalable=no,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="./reset.css" rel="stylesheet" type="text/css">
+    <link href="./general.css" rel="stylesheet" type="text/css">
+    <link href="./public.css" rel="stylesheet" type="text/css">
+    <link href="./js-round2.5.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript" src="./js-round2.5.js"></script>
+</head>
+<body>
+<header class="back-blue">
+    <div class="head-1 fl back-blue">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </div>
+        <h1>杀手杀人</h1>
+        <a href="#"> <h2>×</h2><div class="cl"></div> </a>
+    </div>
+</header>
+<main>
+    <table>
+        <tr>
+            <td class="main-1">狙击手请睁眼，（狙击手告诉法官是否开抢）狙击手请选择要杀的对象</td>
+            <td><audio src="./财富自由.mp3" controls="controls" preload id="myaudio" hidden >你的浏览器不支持</audio><button id="a"  onclick="btn();"></button></td>
+        </tr>
+    </table>
+    <script>
+        function btn(){
+            var audio = document.getElementById('myaudio');
+            if(audio.paused){audio.play();}
+            else{audio.pause();}}
+    </script>
+    <div class="cl"></div>
+</main>
+
+<div class="main-4 back-blue2">
+    <div class="main-2"> <span class="caret"></span></div>
+    <div class="main-3">点击下方玩家头像，对被狙击的玩家进行标记</div>
+</div>
+
+
+
+<footer class="back-blue2">
+    <button>确定</button>
+</footer>
+
+</body>
+</html>
